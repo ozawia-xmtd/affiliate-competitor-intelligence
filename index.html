@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080808" />
+    <meta name="description" content="Evidence-led XMTD Japan affiliate competitor intelligence." />
+    <link rel="icon" href="./xmtd-logo.svg" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>XMTD · Competitor Intelligence</title>
+  </head>
+  <body>
+    <div id="app"><div style="min-height:100vh;display:grid;place-items:center;background:#080808;color:#f4f4f5;font:14px system-ui,sans-serif">Loading XMTD Competitor Intelligence…</div></div>
+    <script type="module">
+      import('./src/main.js').catch(error => {
+        const message = String(error?.message || error);
+        document.querySelector('#app').innerHTML = `<main style="max-width:680px;margin:80px auto;padding:28px;border:1px solid #71303a;border-radius:16px;background:#111112;color:#f4f4f5;font:14px system-ui,sans-serif"><h1 style="font-size:24px">The app could not start</h1><p style="color:#f6a7ad;line-height:1.5">${message.replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[character]))}</p><p style="color:#92929b;line-height:1.5">Check that <code>index.html</code>, <code>src/</code>, <code>data/</code> and <code>public/</code> are all in the repository root.</p></main>`;
+      });
+    </script>
+  </body>
+</html>

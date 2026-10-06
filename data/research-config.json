@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.1",
+  "mode": "local-first",
+  "refreshCadence": "weekly",
+  "maxFetchesPerRun": 80,
+  "requestTimeoutMs": 15000,
+  "respectRobotsTxt": true,
+  "allowlistedDomains": [
+    "partners.xmtrading.com",
+    "cloud.xmtrading.com",
+    "affiliates.hfm.com",
+    "lp.hfm.com",
+    "static.hfm.com",
+    "get.exness-affiliates.help",
+    "www.vantagetrading.com",
+    "www.xs.com",
+    "my.xs.com"
+  ],
+  "notes": [
+    "The browser UI never stores API keys.",
+    "Public-page fetching is limited to source-register URLs and allowlisted domains.",
+    "Scraping must respect robots.txt, terms, rate limits and applicable law.",
+    "Use a backend or scheduled GitHub Action for live research; GitHub Pages is a static host."
+  ]
+}
+
