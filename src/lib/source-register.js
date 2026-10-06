@@ -11,6 +11,8 @@ const empty = value => value == null ? '' : String(value);
 export function configureSourceRegisterData(registerPayload, gapsPayload) {
   registerData = registerPayload || { fields: [], records: [] };
   gapsData = gapsPayload || { fields: [], records: [] };
+  SOURCE_REGISTER_FIELDS = registerData.fields || [];
+  SOURCE_GAPS_FIELDS = gapsData.fields || [];
 }
 
 export function loadSourceRegister() {
