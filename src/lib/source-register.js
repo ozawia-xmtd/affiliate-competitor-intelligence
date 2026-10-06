@@ -2,6 +2,8 @@ import { createId, readJson, writeJson } from './storage.js';
 
 let registerData = { fields: [], records: [] };
 let gapsData = { fields: [], records: [] };
+let SOURCE_REGISTER_FIELDS = [];
+let SOURCE_GAPS_FIELDS = [];
 const ADDITIONS_KEY = 'xmtd.source-register.additions.v1';
 
 const empty = value => value == null ? '' : String(value);
