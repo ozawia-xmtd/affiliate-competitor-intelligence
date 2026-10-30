@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>XMTD Competitor Intelligence Report</title>
+<style>
+:root{--bg:#0b0b0c;--panel:#151517;--panel2:#1c1c1f;--text:#f6f6f7;--muted:#a9a9af;--line:#2d2d32;--accent:#e31b23;--green:#2fc47c;--amber:#f3b93f;--blue:#5aa9ff;--purple:#a880ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 90% 0%,rgba(227,27,35,.11),transparent 32%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}.shell{max-width:1480px;margin:auto;padding:24px}
+.top{position:sticky;top:0;z-index:10;margin:-24px -24px 20px;padding:14px 24px;background:rgba(11,11,12,.9);backdrop-filter:blur(12px);border-bottom:1px solid #242428;display:flex;justify-content:space-between;align-items:center}.brand{display:flex;gap:11px;align-items:center;font-weight:850}.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--accent),#880b10);display:grid;place-items:center;font-size:13px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-top:2px}
+button{border:1px solid var(--line);background:var(--panel2);color:white;padding:10px 14px;border-radius:11px;font-weight:750;cursor:pointer}.primary{background:var(--accent);border-color:var(--accent)}
+.hero{padding:34px;border-radius:28px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.01)),var(--panel);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:480px;height:480px;border-radius:50%;right:-210px;top:-250px;background:radial-gradient(circle,rgba(227,27,35,.34),transparent 67%)}.eyebrow{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;opacity:.7}.hero h1{font-size:clamp(34px,5vw,68px);line-height:.98;letter-spacing:-.045em;margin:12px 0 16px;max-width:1000px}.hero p{color:var(--muted);max-width:920px;line-height:1.65;margin:0}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.chip{font-size:11px;font-weight:750;border:1px solid var(--line);border-radius:999px;padding:7px 10px;background:rgba(255,255,255,.025)}
+.grid{display:grid;gap:17px}.kpis{grid-template-columns:repeat(5,1fr);margin:18px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:19px}.kpi .lab{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}.kpi .val{font-size:31px;font-weight:900;margin-top:8px;letter-spacing:-.04em}.kpi .hint{font-size:11px;color:var(--muted);margin-top:3px}
+.section{margin-top:24px}.section-head{margin:0 3px 11px}.section-head h2{margin:0;font-size:21px;letter-spacing:-.02em}.section-head p{margin:5px 0 0;color:var(--muted);font-size:12px}.two{grid-template-columns:1.25fr .75fr}.three{grid-template-columns:repeat(3,1fr)}.summary{font-size:15px;color:#e1e1e5;line-height:1.75}
+.signals{display:grid;gap:10px}.signal{display:flex;gap:11px;padding:11px;border:1px solid var(--line);border-radius:14px;background:var(--panel2)}.sigicon{width:30px;height:30px;border-radius:9px;background:rgba(227,27,35,.13);display:grid;place-items:center;color:#ff6d72;font-weight:900}.signal b{font-size:12px}.signal span{display:block;color:var(--muted);font-size:11px;margin-top:3px;line-height:1.45}
+.analytics{grid-template-columns:1fr 1fr 1fr}.barrow{display:grid;grid-template-columns:110px 1fr 32px;gap:8px;align-items:center;font-size:11px;margin:11px 0}.barbg{height:8px;background:#29292e;border-radius:99px;overflow:hidden}.bar{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),#ff535a)}.bar.green{background:linear-gradient(90deg,#158d51,var(--green))}.bar.blue{background:linear-gradient(90deg,#326faa,var(--blue))}.bar.amber{background:linear-gradient(90deg,#b3770c,var(--amber))}
+.ringwrap{display:flex;gap:16px;align-items:center}.ring{--p:75;width:96px;height:96px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--p)*1%),#2b2b30 0);display:grid;place-items:center;position:relative}.ring:after{content:"";position:absolute;width:69px;height:69px;border-radius:50%;background:var(--panel)}.ring b{position:relative;z-index:1;font-size:20px}.small{font-size:11px;color:var(--muted);line-height:1.5}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}select,input{background:var(--panel2);border:1px solid var(--line);color:white;padding:9px 10px;border-radius:10px;font:inherit;font-size:11px}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:17px;background:var(--panel)}table{width:100%;border-collapse:collapse;min-width:1260px}th{position:sticky;top:0;background:#19191c;color:#bdbdc3;text-align:left;padding:11px 10px;font-size:9px;text-transform:uppercase;letter-spacing:.09em;border-bottom:1px solid var(--line)}td{padding:11px 10px;border-bottom:1px solid var(--line);font-size:11px;vertical-align:top;line-height:1.45}.badge{display:inline-block;border-radius:999px;padding:5px 8px;font-size:9px;font-weight:850;border:1px solid transparent;white-space:nowrap}.high{background:rgba(47,196,124,.12);color:#7be0ac;border-color:rgba(47,196,124,.25)}.medium{background:rgba(243,185,63,.12);color:#f6c960;border-color:rgba(243,185,63,.25)}.low{background:rgba(255,107,107,.12);color:#ff9a9a;border-color:rgba(255,107,107,.25)}.verified{background:rgba(90,169,255,.12);color:#9acbff;border-color:rgba(90,169,255,.25)}.claim{background:rgba(168,128,255,.12);color:#c5abff;border-color:rgba(168,128,255,.25)}.japan{background:rgba(227,27,35,.11);color:#ff858a;border-color:rgba(227,27,35,.23)}.neutral{background:rgba(255,255,255,.055);color:#ccc;border-color:rgba(255,255,255,.08)}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.shot{width:110px;aspect-ratio:16/10;border-radius:9px;background:#222226;border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;color:#7f7f86;font-size:9px;text-align:center}.shot img{width:100%;height:100%;object-fit:cover}
+ul{color:#d8d8dc;line-height:1.7;margin:7px 0;padding-left:19px}.opp{position:relative;overflow:hidden}.opp .rank{position:absolute;right:14px;top:8px;font-size:42px;font-weight:900;color:rgba(255,255,255,.04)}.opp h3{font-size:15px;margin:0 0 7px}.opp p{font-size:12px;color:var(--muted);line-height:1.55}.oppmeta{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.evidence{overflow:hidden;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.visual{aspect-ratio:16/9;background:linear-gradient(135deg,#202024,#101012);display:grid;place-items:center;color:#777;font-size:11px}.visual img{width:100%;height:100%;object-fit:cover}.ebody{padding:12px}.ebody b{font-size:11px}.ebody div{font-size:10px;color:var(--muted);margin-top:3px}.sources{display:grid;gap:8px}.source{display:grid;grid-template-columns:135px 1fr auto;gap:12px;align-items:center;background:var(--panel2);border:1px solid var(--line);padding:11px;border-radius:13px}.source .title{font-size:11px;font-weight:800}.source .url{font-size:9px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nextitem{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;margin:12px 0}.nextitem .n{width:28px;height:28px;border-radius:9px;background:var(--accent);display:grid;place-items:center;font-size:10px;font-weight:900}footer{text-align:center;color:#777;font-size:9px;margin:28px 0 6px}
+@media(max-width:1050px){.kpis{grid-template-columns:repeat(2,1fr)}.two,.three,.analytics,.gallery{grid-template-columns:1fr 1fr}}@media(max-width:700px){.shell{padding:13px}.top{margin:-13px -13px 13px;padding:11px 13px}.hero{padding:23px}.kpis,.two,.three,.analytics,.gallery{grid-template-columns:1fr}}
+@media print{body{background:white;color:#111}.shell{max-width:none;padding:0}.top,.filters{display:none}.hero,.card,.tablewrap,.evidence,.source{background:white;color:#111;border-color:#ddd}.hero p,.small,.section-head p,.kpi .hint,.source .url,.opp p{color:#555}th{position:static;background:#f4f4f4;color:#333}td{color:#111}.badge{background:#f4f4f4!important;color:#222!important;border-color:#bbb!important}.ring:after{background:white}.mono{color:#111}}
+</style>
+</head>
+<body>
+<div class="shell">
+<div class="top"><div class="brand"><div class="mark">XMTD</div><div>Competitor Intelligence<small>Affiliate product analysis</small></div></div><div><button onclick="document.getElementById('findings').scrollIntoView()">Findings</button> <button class="primary" onclick="window.print()">Export PDF</button></div></div>
+
+<section class="hero"><div class="eyebrow">Competitor Intelligence Report</div><h1 id="title"></h1><p id="summaryHero"></p><div class="chips" id="meta"></div></section>
+<section class="grid kpis" id="kpis"></section>
+
+<section class="section grid two">
+<div class="card"><div class="section-head"><h2>Executive summary</h2><p>Evidence-led interpretation of the current dataset</p></div><div class="summary" id="summary"></div></div>
+<div class="card"><div class="section-head"><h2>Intelligence signals</h2><p>What deserves attention first</p></div><div class="signals" id="signals"></div></div>
+</section>
+
+<section class="section"><div class="section-head"><h2>Evidence health</h2><p>Confidence, evidence classification and completeness</p></div>
+<div class="grid analytics"><div class="card"><h3>Confidence distribution</h3><div id="confidence"></div></div><div class="card"><h3>Evidence classification</h3><div id="evidence"></div></div><div class="card"><h3>Dataset completeness</h3><div class="ringwrap"><div class="ring" id="ring"><b id="ringPct"></b></div><div><b id="coverageLabel"></b><div class="small" id="coverageText"></div></div></div></div></div></section>
+
+<section class="section" id="findings"><div class="section-head"><h2>Evidence-based findings</h2><p>Mirrors the XMTD Affiliate Competitor Matrix fields</p></div>
+<div class="filters"><input id="q" placeholder="Search..." oninput="renderFindings()"><select id="cat" onchange="renderFindings()"><option value="">All categories</option></select><select id="conf" onchange="renderFindings()"><option value="">All confidence</option><option>High</option><option>Medium</option><option>Low</option></select><select id="ev" onchange="renderFindings()"><option value="">All evidence</option></select></div>
+<div class="tablewrap"><table><thead><tr><th>Finding ID</th><th>Category</th><th>Data Point</th><th>Normalised Finding</th><th>Evidence Status</th><th>Confidence</th><th>Japan Applicability</th><th>Source ID</th><th>Evidence Screenshot</th><th>Ambiguity / Limitation</th><th>XMTD Relevance</th></tr></thead><tbody id="tbody"></tbody></table></div></section>
+
+<section class="section"><div class="section-head"><h2>Strategic readout</h2><p>Interpretation separated from source facts</p></div><div class="grid two"><div class="card"><h3>Strengths observed</h3><div id="strengths"></div></div><div class="card"><h3>Weaknesses / pressure points</h3><div id="weaknesses"></div></div></div></section>
+
+<section class="section"><div class="section-head"><h2>XMTD opportunity radar</h2><p>Evidence-linked ideas rather than copy-the-competitor recommendations</p></div><div class="grid three" id="opps"></div></section>
+
+<section class="section"><div class="section-head"><h2>Risks, limitations & unknowns</h2><p>Uncertainty remains visible</p></div><div class="grid two"><div class="card"><h3>Risks & limitations</h3><div id="risks"></div></div><div class="card"><h3>Missing information</h3><div id="unknowns"></div></div></div></section>
+
+<section class="section"><div class="section-head"><h2>Evidence gallery</h2><p>Archived screenshots/images tied to registered Source IDs</p></div><div class="gallery" id="gallery"></div></section>
+<section class="section"><div class="section-head"><h2>Sources used</h2><p>Traceability back to the XMTD Competitor Source Register</p></div><div class="card sources" id="sources"></div></section>
+<section class="section"><div class="section-head"><h2>Recommended next actions</h2><p>Follow-up driven by evidence gaps</p></div><div class="card" id="next"></div></section>
+<footer id="foot"></footer>
+</div>
+
+<!-- GEM TEMPLATE CONTRACT:
+Preserve the HTML/CSS/JS and replace only the JSON in #report-data.
+Field mapping:
+Finding ID -> findings[].findingId
+Competitor -> report.competitor
+Analysis Category -> findings[].analysisCategory
+Data Point -> findings[].dataPoint
+Normalised Finding -> findings[].normalisedFinding
+Raw Source Wording -> findings[].rawSourceWording
+Source ID -> findings[].sourceIds[]
+Source Type -> findings[].sourceType
+Japan Applicability -> findings[].japanApplicability
+Confidence -> findings[].confidence
+Evidence Status -> findings[].evidenceStatus
+Ambiguity / Limitation -> findings[].ambiguity
+XMTD Relevance -> findings[].xmtdRelevance
+Never invent screenshots. If none is registered, leave screenshot blank.
+-->
+<script id="report-data" type="application/json">
+{
+  "report":{
+    "competitor":"XS",
+    "scope":"Partner Loyalty Programme",
+    "market":"Japan relevance assessment",
+    "generatedDate":"2026-08-28",
+    "lastVerified":"2026-08-28",
+    "reportType":"Feature Deep Dive",
+    "summary":"XS presents a structured partner loyalty proposition built around partner enrolment, referred-client activity and trading-volume milestones. The reviewed global evidence supports several programme mechanics, while Japan-specific applicability remains a material limitation. This demo shows how approved Competitor Matrix findings can become an executive dashboard.",
+    "signals":[
+      {"title":"Retention mechanic","detail":"Milestone progression creates an explicit long-term partner incentive."},
+      {"title":"Japan evidence gap","detail":"Reviewed global sources do not establish Japan-specific applicability."},
+      {"title":"Claim to validate","detail":"Promoted reward value should remain a competitor claim unless independently verified."}
+    ]
+  },
+  "findings":[
+    {"findingId":"XS-LOY-001","analysisCategory":"Loyalty","dataPoint":"Loyalty programme availability","normalisedFinding":"Available","rawSourceWording":"XS Partner Loyalty Program","sourceIds":["XS-SRC-004"],"sourceType":"Primary","japanApplicability":"Global—Japan not confirmed","confidence":"High","evidenceStatus":"Verified fact","ambiguity":"Japan-specific eligibility is not established by this source.","xmtdRelevance":"Confirms a dedicated partner-retention mechanism worth benchmarking.","screenshot":""},
+    {"findingId":"XS-LOY-002","analysisCategory":"Loyalty","dataPoint":"Reward qualification basis","normalisedFinding":"Active referred clients and trading volume","rawSourceWording":"Rewards are based on active clients brought in and their trading volume.","sourceIds":["XS-SRC-004"],"sourceType":"Primary","japanApplicability":"Global—Japan not confirmed","confidence":"High","evidenceStatus":"Verified fact","ambiguity":"Exact thresholds are not stated in the reviewed public evidence.","xmtdRelevance":"Shows loyalty can be linked to both acquisition quality and ongoing trading activity.","screenshot":""},
+    {"findingId":"XS-LOY-003","analysisCategory":"Loyalty","dataPoint":"Reward format","normalisedFinding":"Physical prizes or cash alternative","rawSourceWording":"Partners can choose between physical prizes or cash alternatives.","sourceIds":["XS-SRC-004","XS-SRC-005"],"sourceType":"Primary","japanApplicability":"Global—Japan not confirmed","confidence":"High","evidenceStatus":"Verified fact","ambiguity":"Cash-equivalent values and fulfilment conditions need further validation.","xmtdRelevance":"Flexible reward redemption may improve programme utility across partner segments.","screenshot":""},
+    {"findingId":"XS-LOY-004","analysisCategory":"Loyalty","dataPoint":"Reward cap","normalisedFinding":"No stated cap on number of prizes","rawSourceWording":"The programme states there is no limit to how many prizes a partner can receive.","sourceIds":["XS-SRC-004"],"sourceType":"Primary","japanApplicability":"Global—Japan not confirmed","confidence":"High","evidenceStatus":"Competitor claim","ambiguity":"Underlying terms and exclusions should be reviewed.","xmtdRelevance":"An uncapped progression message can strengthen retention positioning.","screenshot":""},
+    {"findingId":"XS-LOY-005","analysisCategory":"Loyalty","dataPoint":"Promoted reward value","normalisedFinding":"More than $1M promoted per partner","rawSourceWording":"XS promotes rewards worth more than $1 million.","sourceIds":["XS-SRC-004","XS-SRC-005"],"sourceType":"Primary","japanApplicability":"Global—Japan not confirmed","confidence":"High","evidenceStatus":"Competitor claim","ambiguity":"Promotional value is not independently verified.","xmtdRelevance":"Demonstrates use of a high headline reward ceiling as a partner-acquisition message.","screenshot":""}
+  ],
+  "strengths":["Clear milestone-based loyalty proposition.","Choice between physical rewards and cash alternatives.","Messaging supports long-term partner progression."],
+  "weaknesses":["Japan-specific programme applicability is not established.","Exact milestone thresholds are not visible in the reviewed sources.","Headline reward value remains a competitor marketing claim."],
+  "opportunities":[
+    {"title":"Partner loyalty discovery","type":"Retention improvement","impact":"High","complexity":"Medium","evidence":"XS-LOY-001, XS-LOY-002","detail":"Validate whether Japanese affiliates value milestone-based recognition beyond direct commission."},
+    {"title":"Flexible reward redemption","type":"Differentiator","impact":"Medium","complexity":"Medium","evidence":"XS-LOY-003","detail":"Test whether cash-vs-benefit choice improves relevance across affiliate segments."},
+    {"title":"Progress visibility","type":"Operational improvement","impact":"Medium","complexity":"Medium","evidence":"XS-LOY-002","detail":"Explore explicit progression visibility and next-milestone cues."}
+  ],
+  "risks":["Global programme evidence must not be assumed to apply to Japanese partners.","Competitor marketing claims require careful classification.","Missing programme terms may materially change interpretation."],
+  "unknowns":["Exact milestone thresholds.","Japan-specific eligibility and availability.","Detailed programme terms and exclusions.","Exact active-client qualification definition."],
+  "sources":[
+    {"sourceId":"XS-SRC-004","title":"XS Partner Loyalty Program","type":"Primary","scope":"Global","lastVerified":"2026-08-28","url":"https://www.xs.com/en/promotions/partner-loyalty-program/","screenshot":""},
+    {"sourceId":"XS-SRC-005","title":"XS.com Unveils Partners Loyalty Program with $1M+ Rewards per Partner","type":"Primary","scope":"Global","lastVerified":"2026-08-28","url":"https://www.xs.com/en/media/xs-press-releases/xscom-unveils-partners-loyalty-program-with-1m-rewards-per-partner/","screenshot":""}
+  ],
+  "nextActions":["Locate and register the underlying XS Partner Loyalty terms and conditions.","Confirm whether the programme is available to partners targeting Japan.","Identify exact milestone thresholds and qualification definitions.","Collect a credible Japanese affiliate source discussing XS partner incentives."]
+}
+</script>
+
+<script>
+const D=JSON.parse(document.getElementById("report-data").textContent),F=D.findings;
+const E=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+const C=(k,v)=>F.filter(x=>x[k]===v).length,P=(a,b)=>b?Math.round(a/b*100):0;
+const B=(v,t)=>`<span class="badge ${t==="c"?v.toLowerCase():t==="e"?(v==="Verified fact"?"verified":v==="Competitor claim"?"claim":"neutral"):t==="j"?"japan":"neutral"}">${E(v)}</span>`;
+document.getElementById("title").textContent=`${D.report.competitor} — ${D.report.scope}`;
+document.getElementById("summaryHero").textContent=D.report.summary;document.getElementById("summary").textContent=D.report.summary;
+document.getElementById("meta").innerHTML=[D.report.reportType,D.report.market,`Last verified ${D.report.lastVerified}`].map(x=>`<span class="chip">${E(x)}</span>`).join("");
+const high=C("confidence","High"),jp=F.filter(x=>/Japan-specific|Confirmed for Japan/.test(x.japanApplicability)).length,src=[...new Set(F.flatMap(x=>x.sourceIds))];
+document.getElementById("kpis").innerHTML=[["Matrix findings",F.length,"Structured evidence"],["High confidence",high,`${P(high,F.length)}% of findings`],["Japan confirmed",jp,`${P(jp,F.length)}% of findings`],["Open unknowns",D.unknowns.length,"Follow-up needed"],["Registered sources",src.length,`${C("evidenceStatus","Competitor claim")} competitor claims`]].map(x=>`<div class="card kpi"><div class="lab">${x[0]}</div><div class="val">${x[1]}</div><div class="hint">${x[2]}</div></div>`).join("");
+document.getElementById("signals").innerHTML=D.report.signals.map(s=>`<div class="signal"><div class="sigicon">↗</div><div><b>${E(s.title)}</b><span>${E(s.detail)}</span></div></div>`).join("");
+function bars(id,items){document.getElementById(id).innerHTML=items.map(([l,n,c=""])=>`<div class="barrow"><span>${E(l)}</span><div class="barbg"><div class="bar ${c}" style="width:${P(n,F.length)}%"></div></div><b>${n}</b></div>`).join("")}
+bars("confidence",[["High",C("confidence","High"),"green"],["Medium",C("confidence","Medium"),"amber"],["Low",C("confidence","Low"),""]]);
+const sts=[...new Set(F.map(x=>x.evidenceStatus))];bars("evidence",sts.map((s,i)=>[s,C("evidenceStatus",s),i===0?"blue":i===1?"":"amber"]));
+const comp=Math.max(0,100-Math.min(100,D.unknowns.length*12));document.getElementById("ring").style.setProperty("--p",comp);document.getElementById("ringPct").textContent=comp+"%";document.getElementById("coverageLabel").textContent=comp>=80?"Strong coverage":comp>=60?"Moderate coverage":"Evidence gaps remain";document.getElementById("coverageText").textContent=`Heuristic based on ${F.length} findings and ${D.unknowns.length} explicit unknowns.`;
+const cats=[...new Set(F.map(x=>x.analysisCategory))];document.getElementById("cat").innerHTML+=cats.map(x=>`<option>${E(x)}</option>`).join("");document.getElementById("ev").innerHTML+=sts.map(x=>`<option>${E(x)}</option>`).join("");
+const S=(u,ids)=>u?`<a class="shot" href="${E(u)}" target="_blank"><img src="${E(u)}"></a>`:`<div class="shot">No archived screenshot<br>${E(ids.join(", "))}</div>`;
+function renderFindings(){let q=document.getElementById("q").value.toLowerCase(),cat=document.getElementById("cat").value,conf=document.getElementById("conf").value,ev=document.getElementById("ev").value;let rows=F.filter(x=>(!q||JSON.stringify(x).toLowerCase().includes(q))&&(!cat||x.analysisCategory===cat)&&(!conf||x.confidence===conf)&&(!ev||x.evidenceStatus===ev));document.getElementById("tbody").innerHTML=rows.map(x=>`<tr><td class="mono">${E(x.findingId)}</td><td>${E(x.analysisCategory)}</td><td><b>${E(x.dataPoint)}</b></td><td>${E(x.normalisedFinding)}</td><td>${B(x.evidenceStatus,"e")}</td><td>${B(x.confidence,"c")}</td><td>${B(x.japanApplicability,"j")}</td><td class="mono">${x.sourceIds.map(E).join("<br>")}</td><td>${S(x.screenshot,x.sourceIds)}</td><td>${E(x.ambiguity)}</td><td>${E(x.xmtdRelevance)}</td></tr>`).join("")}renderFindings();
+const bullets=a=>`<ul>${a.map(x=>`<li>${E(x)}</li>`).join("")}</ul>`;document.getElementById("strengths").innerHTML=bullets(D.strengths);document.getElementById("weaknesses").innerHTML=bullets(D.weaknesses);document.getElementById("risks").innerHTML=bullets(D.risks);document.getElementById("unknowns").innerHTML=bullets(D.unknowns);
+document.getElementById("opps").innerHTML=D.opportunities.map((o,i)=>`<div class="card opp"><div class="rank">0${i+1}</div><h3>${E(o.title)}</h3><p>${E(o.detail)}</p><div class="oppmeta">${B(o.type,"x")}${B("Impact "+o.impact,"x")}${B("Complexity "+o.complexity,"x")}</div><div class="small" style="margin-top:9px">Evidence: <span class="mono">${E(o.evidence)}</span></div></div>`).join("");
+document.getElementById("gallery").innerHTML=D.sources.map(s=>`<div class="evidence"><div class="visual">${s.screenshot?`<img src="${E(s.screenshot)}">`:"No archived screenshot available"}</div><div class="ebody"><b>${E(s.sourceId)} — ${E(s.title)}</b><div>${E(s.scope)} · ${E(s.type)} · Verified ${E(s.lastVerified)}</div></div></div>`).join("");
+document.getElementById("sources").innerHTML=D.sources.map(s=>`<div class="source"><span class="mono">${E(s.sourceId)}</span><div><div class="title">${E(s.title)}</div><div class="url">${E(s.url)}</div></div><a href="${E(s.url)}" target="_blank"><button>Open source</button></a></div>`).join("");
+document.getElementById("next").innerHTML=D.nextActions.map((x,i)=>`<div class="nextitem"><div class="n">${i+1}</div><div><b>${E(x)}</b></div></div>`).join("");
+document.getElementById("foot").textContent=`XMTD Competitor Intelligence · ${D.report.competitor} · Generated ${D.report.generatedDate} · Internal template`;
+</script>
+</body></html>
