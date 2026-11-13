@@ -24,6 +24,7 @@
 ## Deployment
 
 - GitHub Pages should be treated as public. Check the build output before deploying.
+- The QR access screen is a convenience gate, not authentication. The fixed token is embedded in published JavaScript, and all app assets and JSON data remain publicly downloadable. Do not use this feature to protect confidential information. Real access control requires a private repository/site or a server that validates credentials before serving protected data.
 - The default refresh workflow has read-only repository permissions and uploads an artifact instead of committing changes.
 - If write-back is later added, use a narrow protected branch, required review and a dedicated bot identity.
 

@@ -32,6 +32,12 @@ This project supports two deployment modes. The immediate no-install mode publis
 
 The complete app is now running from GitHub. `index.html` loads `src/main.js`, which loads the JSON files in `data/`. The folder structure must not be flattened.
 
+## QR access convenience gate
+
+The dashboard shows an access QR icon in the top bar. Open it and scan the QR code on another device; that browser stores access in local storage, so it will not need another scan. The token is carried in the URL fragment and removed from the address bar after access is recorded. The QR library is loaded from jsDelivr.
+
+This does not make a GitHub Pages deployment private. The token is included in public client-side code, and the published app and `data/` files can still be downloaded by anyone. Use it only to reduce casual visits; do not publish confidential data under this setup.
+
 ## Normal update cycle — browser-only
 
 1. Edit a file through GitHub’s web interface for small changes, or prepare a replacement file locally.
