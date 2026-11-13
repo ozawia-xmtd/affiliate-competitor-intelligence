@@ -63,7 +63,6 @@ function shell() {
           <button class="browser-action" id="addSourceBtn" title="Add a source register record" aria-label="Add source register record"><span>＋</span></button>
           <button class="browser-action" id="downloadPdfBtn" title="Download analysis as PDF" aria-label="Download PDF"><span>↓</span></button>
           <button class="browser-action" id="accessQrBtn" title="Show dashboard access QR code" aria-label="Show dashboard access QR code"><span>▦</span></button>
-          <button class="browser-action" id="logoutBtn" title="Log out and require QR access again" aria-label="Log out"><span>⎋</span></button>
         </div>
       </div>
       <div class="app-shell">
@@ -114,10 +113,6 @@ function bindShellEvents() {
   $('#addSourceBtn').addEventListener('click', () => openModal('source'));
   $('#downloadPdfBtn').addEventListener('click', downloadPdf);
   $('#accessQrBtn').addEventListener('click', showAccessQr);
-  $('#logoutBtn').addEventListener('click', () => {
-    localStorage.removeItem(ACCESS_KEY);
-    location.replace(`${location.pathname}${location.search}`);
-  });
   $('#downloadRegisterBtn').addEventListener('click', () => { downloadSourceRegister(state.records); toast('Source register exported as CSV'); });
   $('#chatToggle').addEventListener('click', () => $('#chatPanel').classList.add('open'));
   $('#closeChat').addEventListener('click', () => $('#chatPanel').classList.remove('open'));
