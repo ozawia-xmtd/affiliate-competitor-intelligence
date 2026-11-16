@@ -1,1 +1,84 @@
-{"schemaVersion":"1.1","source":"XMTD Competitor Source Register.xlsx","recordCount":1,"fields":["Gap ID","Competitor","Missing Source Category","Missing Information","Japan Relevance","Priority","Reason for Gap","Owner","Status"],"records":[{"Gap ID":"GAP-001","Competitor":"XS","Missing Source Category":"Terms","Missing Information":"Japan-specific affiliate agreement","Japan Relevance":"High","Priority":"High","Reason for Gap":"TCs Probably hidden behind the Aff Platform","Owner":"Omar","Status":"Open"}]}
+{
+  "schemaVersion": "1.1",
+  "source": "XMTD Competitor Source Register.xlsx",
+  "recordCount": 6,
+  "fields": [
+    "Gap ID",
+    "Competitor",
+    "Missing Source Category",
+    "Missing Information",
+    "Japan Relevance",
+    "Priority",
+    "Reason for Gap",
+    "Owner",
+    "Status"
+  ],
+  "records": [
+    {
+      "Gap ID": "GAP-001",
+      "Competitor": "XS",
+      "Missing Source Category": "Terms",
+      "Missing Information": "Japan-specific affiliate agreement",
+      "Japan Relevance": "High",
+      "Priority": "High",
+      "Reason for Gap": "TCs Probably hidden behind the Aff Platform",
+      "Owner": "Omar",
+      "Status": "Open"
+    },
+    {
+      "Gap ID": "NOV13-PORTALS",
+      "Competitor": "All competitors",
+      "Missing Source Category": "Research verification",
+      "Missing Information": "Complete private-portal promotion coverage",
+      "Japan Relevance": "High",
+      "Priority": "High",
+      "Reason for Gap": "Exness CPA and FXGT partner portals accessed. HFM, XS, Axiory and both Vantage programmes have no supplied credentials. Public findings do not establish every private offer.",
+      "Owner": "Omar / competitor intelligence",
+      "Status": "Open"
+    },
+    {
+      "Gap ID": "NOV13-TERMS",
+      "Competitor": "Exness / XS / Axiory / Vantage Markets",
+      "Missing Source Category": "Research verification",
+      "Missing Information": "Numeric IB minimum holding time and Japan applicability",
+      "Japan Relevance": "High",
+      "Priority": "High",
+      "Reason for Gap": "No numeric threshold established in reviewed sources; obtain applicable signed Japan/account agreement. Client reward rules are not IB commission rules.",
+      "Owner": "Omar / competitor intelligence",
+      "Status": "Open"
+    },
+    {
+      "Gap ID": "NOV13-REGION",
+      "Competitor": "HFM / FXGT / Vantage Markets",
+      "Missing Source Category": "Research verification",
+      "Missing Information": "Regional promotion access and original banners",
+      "Japan Relevance": "High",
+      "Priority": "High",
+      "Reason for Gap": "Some browser links redirect to regional homepages; missing original banners and detailed eligibility remain explicit.",
+      "Owner": "Omar / competitor intelligence",
+      "Status": "Open"
+    },
+    {
+      "Gap ID": "NOV13-CONFLICTS",
+      "Competitor": "HFM / XS / Vantage Trading",
+      "Missing Source Category": "Research verification",
+      "Missing Information": "Resolve conflicting promotion conditions",
+      "Japan Relevance": "High",
+      "Priority": "High",
+      "Reason for Gap": "HFM November date/cap; XS welcome existing-client eligibility; Vantage 10-minute cashback boundary and September account eligibility. Both sources retained in findings.",
+      "Owner": "Omar / competitor intelligence",
+      "Status": "Open"
+    },
+    {
+      "Gap ID": "NOV13-APPROVAL",
+      "Competitor": "All competitors",
+      "Missing Source Category": "Research verification",
+      "Missing Information": "Human approval of November findings",
+      "Japan Relevance": "High",
+      "Priority": "High",
+      "Reason for Gap": "New findings are Draft; automated research has not approved or replaced the legacy competitor matrix.",
+      "Owner": "Omar / competitor intelligence",
+      "Status": "Open"
+    }
+  ]
+}
