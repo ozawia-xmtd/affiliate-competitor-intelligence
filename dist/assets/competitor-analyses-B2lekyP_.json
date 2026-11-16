@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.1",
+  "asOf": "2026-10-02",
+  "market": "Japan",
+  "baseline": "XMTD",
+  "competitors": [
+    {
+      "id": "XMTD",
+      "label": "XMTD",
+      "short": "XMTrading",
+      "role": "Baseline",
+      "color": "#f05a67",
+      "headline": "Up to USD 20 / lot",
+      "basis": "Fixed fee or percentage per lot",
+      "japan": "Japan-specific partner page and introducer agreement",
+      "japanStatus": "clear",
+      "economics": "Up to USD 20/lot, unlimited commissions and a 10% sub-affiliate commission are advertised.",
+      "rebate": "Cashback is mentioned on the partner page. The agreement requires written authorisation before passing introducer payments to third parties.",
+      "rebateStatus": "partial",
+      "payout": "Weekly; no payment below USD 500; USD only unless an alternative is approved.",
+      "restrictions": "Trades held five minutes or less are excluded; bonus, churning, fraud and self-referral controls apply.",
+      "reporting": "Real-time reporting and promotional tools are advertised.",
+      "gap": "Reconcile cashback marketing language with the written pass-through restriction and publish account/instrument rates.",
+      "sources": ["XMTD-001", "XMTD-002", "XMTD-003", "XMTD-004"],
+      "classification": "Primary-led baseline",
+      "opportunities": [
+        "Make the affiliate-to-client value proposition explicit and publish a compliant cashback/pass-through policy.",
+        "Use the existing real-time tools to provide partner-facing retention alerts and campaign diagnostics.",
+        "Reduce the barrier to small affiliates by testing lower-frequency or more flexible payout operations where commercially safe."
+      ],
+      "risks": [
+        "A weekly cycle and USD 500 threshold can make the programme feel slower than daily or same-day competitors.",
+        "Unresolved cashback wording can make affiliates hesitant to promote the offer.",
+        "Headline USD/lot comparisons are not comparable without account, instrument, tier and eligibility rules."
+      ]
+    },
+    {
+      "id": "HFM",
+      "label": "HFM",
+      "short": "HF Markets",
+      "role": "Competitor claim",
+      "color": "#f19b4f",
+      "headline": "Up to USD 30 / lot",
+      "basis": "60% revenue share / lot headline",
+      "japan": "Japanese pages, but international-use disclaimer leaves Japan eligibility unresolved",
+      "japanStatus": "open",
+      "economics": "Official partner pages advertise up to USD 30/lot and 60% revenue share.",
+      "rebate": "Official FAQ supports automatic rebates; no official client pass-through rate was identified.",
+      "rebateStatus": "partial",
+      "payout": "Daily payments and withdrawal from USD 5 are advertised; the complete binding schedule was not identified.",
+      "restrictions": "Pre-registration trades are excluded; account registration and approval are required.",
+      "reporting": "Partner Analytics Centre is available.",
+      "gap": "Confirm Japan/entity eligibility and obtain the binding affiliate agreement.",
+      "sources": ["HFM-001", "HFM-003", "HFM-004", "HFM-005", "HFM-006", "HFM-009"],
+      "classification": "Primary claim; secondary market rates excluded from headline",
+      "opportunities": [
+        "Position XMTD on Japan certainty and documentation completeness rather than only headline commission.",
+        "Benchmark partner analytics and daily payout communication against the HFM claim set."
+      ],
+      "risks": [
+        "The USD 30/lot and 60% claims may be perceived as stronger by affiliates even though Japan applicability is unresolved.",
+        "Secondary market cashback sources can influence perception outside the official partner programme."
+      ]
+    },
+    {
+      "id": "Exness",
+      "label": "Exness",
+      "short": "Exness",
+      "role": "Strongest rebate controls",
+      "color": "#4edb88",
+      "headline": "20–40% spread share / fixed lot",
+      "basis": "Spread-share or fixed per lot by account and tier",
+      "japan": "Japanese official help centre with regional/global rules; entity agreement remains open",
+      "japanStatus": "partial",
+      "economics": "Standard and Standard Cent: 20–40% average spread by tier; Pro: 17–25%; Zero and Raw: fixed per lot by instrument and tier.",
+      "rebate": "Partners can share up to 100% of their reward; client/group rates and daily, weekly or monthly schedules are configurable. Copy Trading is excluded.",
+      "rebateStatus": "clear",
+      "payout": "Daily or instant partner rewards; instant reward may arrive within about 20 minutes. Client rebates can be daily, weekly or monthly.",
+      "restrictions": "Self-referral, bonus-only, suspicious activity, cancelled spike trades and zero-volume orders are excluded.",
+      "reporting": "API, AppsFlyer/postback, customizable links and reports updated about every ten minutes.",
+      "gap": "Confirm the entity-specific Japan agreement and final regional rate schedule.",
+      "sources": ["EXN-005", "EXN-007", "EXN-008", "EXN-009", "EXN-010", "EXN-011", "EXN-012", "EXN-014", "EXN-019", "EXN-027", "EXN-028", "EXN-029", "EXN-030"],
+      "classification": "Primary-led; official Japanese help centre",
+      "opportunities": [
+        "Match the clarity of account/tier mechanics and give affiliates a calculator for expected reward and client rebate.",
+        "Improve retention through near-real-time reporting, event callbacks and client-level rebate controls where compliant."
+      ],
+      "risks": [
+        "The combination of fast rewards, configurable client sharing and API reporting raises the switching cost for affiliates.",
+        "Third-party Japanese cashback providers create an established market expectation around speed and direct-to-account value."
+      ]
+    },
+    {
+      "id": "Vantage",
+      "label": "Vantage",
+      "short": "Vantage Trading",
+      "role": "Most transparent matrix",
+      "color": "#5b82ff",
+      "headline": "Up to USD 12 / lot",
+      "basis": "Volume-based rank matrix",
+      "japan": "Japan-facing official programme",
+      "japanStatus": "clear",
+      "economics": "Four ranks. Standard FX: USD 4/6/8/10; oil, gold and silver: USD 6/8/10/12; ECN FX/metals: USD 0.5/1/1.5/2.",
+      "rebate": "Standard client cashback pass-through rate was not identified. Separate IB-specific client promotions exist.",
+      "rebateStatus": "open",
+      "payout": "Next-day reward credit; USD/JPY and bank, crypto or BitWallet withdrawal methods.",
+      "restrictions": "Standard/ECN trades under three minutes, bonus-funded trades and self-affiliate activity are excluded; additional-account rules apply.",
+      "reporting": "Partner portal and reporting; two-tier sub-IB structure; additional accounts covered.",
+      "gap": "Confirm current application availability and resolve the rank-adjustment rule conflict.",
+      "sources": ["VTD-001", "VTD-002", "VTD-003", "VTD-004"],
+      "classification": "Primary-led; Japan-facing",
+      "opportunities": [
+        "Give affiliates a simpler, instrument-aware rate card and calculator with fewer interpretation steps.",
+        "Use Japan certainty and a clear pass-through policy to differentiate from the unresolved rebate layer."
+      ],
+      "risks": [
+        "The visible rank matrix can make the programme easier to explain than XMTD's headline-only presentation.",
+        "Conflicting rank/application information creates a reminder that all competitor claims need refresh validation."
+      ]
+    },
+    {
+      "id": "XS",
+      "label": "XS.com",
+      "short": "XS.com",
+      "role": "Retention-led",
+      "color": "#9a70ff",
+      "headline": "Rate not found",
+      "basis": "Digital affiliate plus loyalty milestones",
+      "japan": "Japanese affiliate page; loyalty terms are global and Japan applicability is unconfirmed",
+      "japanStatus": "open",
+      "economics": "A numeric commission rate was not identified in the reviewed first-party sources.",
+      "rebate": "Trader cashback/pass-through was not identified in the reviewed first-party sources.",
+      "rebateStatus": "open",
+      "payout": "Same-day wallet payment is stated on the digital affiliate page; minimum withdrawal was not identified.",
+      "restrictions": "Detailed Japan-specific affiliate restrictions were not established.",
+      "reporting": "Real-time reporting and marketing tools are stated.",
+      "gap": "Obtain the Japan-specific affiliate agreement. GAP-001 is open and high priority.",
+      "sources": ["XS-001", "XS-010", "XS-SRC-002", "XS-SRC-003"],
+      "classification": "Primary-led; Japan terms incomplete",
+      "opportunities": [
+        "Monitor loyalty milestones and retention mechanics as a non-rate competitor signal.",
+        "Win on transparent Japan-specific documentation and measurable partner support."
+      ],
+      "risks": [
+        "A loyalty-led proposition can retain high-value partners even without public numeric rates.",
+        "The open Japan agreement makes direct comparison incomplete."
+      ]
+    }
+  ],
+  "signals": [
+    {"label":"Client rebate", "values":{"XMTD":["Review","partial"],"HFM":["Auto support","partial"],"Exness":["0–100% reward","clear"],"Vantage":["Not found","open"],"XS":["Not found","open"]}},
+    {"label":"Payout speed", "values":{"XMTD":["Weekly","partial"],"HFM":["Daily claim","claim"],"Exness":["Instant / daily","clear"],"Vantage":["Next day","clear"],"XS":["Same day","claim"]}},
+    {"label":"Japan scope", "values":{"XMTD":["Clear","clear"],"HFM":["Unresolved","open"],"Exness":["Regional","partial"],"Vantage":["Clear","clear"],"XS":["Unconfirmed","open"]}},
+    {"label":"Rate clarity", "values":{"XMTD":["Headline","claim"],"HFM":["Headline","claim"],"Exness":["Formula","clear"],"Vantage":["Matrix","clear"],"XS":["Not found","open"]}}
+  ],
+  "opportunities": [
+    {"priority":"P0","title":"Clarify the client-value promise","detail":"Publish a Japan-specific explanation of whether, when and how affiliate earnings can be passed through to clients, aligned to the agreement and approval process.","evidence":["XMTD-001","XMTD-002"]},
+    {"priority":"P0","title":"Reduce payout friction","detail":"Assess a lower minimum or more frequent payout path for eligible affiliates, while preserving fraud and cost controls.","evidence":["XMTD-002","EXN-011","VTD-002","XS-001"]},
+    {"priority":"P1","title":"Make economics calculable","detail":"Add account, instrument, volume-tier and client-rebate scenarios so affiliates can compare expected value without relying on a headline maximum.","evidence":["EXN-027","EXN-028","EXN-029","EXN-030","VTD-002"]},
+    {"priority":"P1","title":"Operationalise retention analytics","detail":"Expose partner-level reporting, campaign attribution and an alert loop for inactive, high-value or at-risk affiliates.","evidence":["XMTD-004","HFM-006","EXN-010","EXN-012","VTD-004"]}
+  ],
+  "risks": [
+    {"severity":"High","title":"Pass-through ambiguity","detail":"Marketing copy can be read more broadly than the agreement. This creates compliance, trust and affiliate-activation risk.","evidence":["XMTD-001","XMTD-002"]},
+    {"severity":"High","title":"Non-comparable headline rates","detail":"USD/lot, revenue share, spread share and fixed commissions depend on different account, instrument, tier and eligibility bases.","evidence":["HFM-003","EXN-027","EXN-030","VTD-002"]},
+    {"severity":"Medium","title":"Japan entity uncertainty","detail":"Some competitor evidence is Japan-facing but still references global or international rules; entity-specific agreements remain missing.","evidence":["HFM-001","EXN-032","GAP-001"]},
+    {"severity":"Medium","title":"Market cashback expectations","detail":"Japanese third-party providers promote direct-to-account, next-day or high-pass-through mechanics that may shape affiliate expectations.","evidence":["EXN-034","EXN-038","EXN-040","EXN-046"]}
+  ],
+  "methodology": {
+    "evidenceClasses": ["Verified fact","Competitor claim","External affiliate opinion","Analyst interpretation","Unknown"],
+    "rules": ["Do not treat not found as not offered.","Keep Japan applicability separate from global or international evidence.","Show source IDs and refresh dates.","Do not create an overall ranking when bases are not comparable."],
+    "sourcePack": "01-XMTD-Competitor-Analyses-sources-290926.zip"
+  }
+}
+
